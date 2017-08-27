@@ -1,0 +1,16 @@
+{
+  "name": "poly-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "flat": true,
+  "dependencies": {
+    "@polymer/iron-resizable-behavior": "next",
+    "@polymer/paper-button": "next",
+    "@polymer/polymer": "next",
+    "@webcomponents/webcomponentsjs": "^1.0.8"
+  },
+  "resolutions": {
+    "@polymer/polymer": "3.0.0-pre.1"
+  }
+}
