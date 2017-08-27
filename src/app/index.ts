@@ -5,7 +5,7 @@ import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
 import '@polymer/paper-button/paper-button';
 import { IronResizableBehavior } from '@polymer/iron-resizable-behavior/iron-resizable-behavior';
 // import * as Async from '@polymer/polymer/lib/utils/async';
-import view from './app.template.html';
+import * as view from './app.template.html';
 
 // Async.microTask.run(callback);
 
@@ -30,10 +30,8 @@ export class MyApp extends PolymerElement {
             },
             owner: {
                 type: String,
-                value: "Daniel",
+                value: "Daniel Ha",
             }
         };
     }
 }
-
-// customElements.define(kebabCase('MyApp'), MyApp);

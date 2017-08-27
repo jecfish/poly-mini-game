@@ -2,9 +2,11 @@
 // Element is the same as Polymer.Element in 2.x
 // Modules give you the freedom to rename the members that you import
 import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
-import view from './emp-list.template.html';
+import * as view from './emp-list.template.html';
 
 export class MyEmpList extends PolymerElement {
+
+    employees: any[];
 
     static get template() {
         return view;
@@ -13,7 +15,7 @@ export class MyEmpList extends PolymerElement {
     constructor() {
         super();
         this.employees = [
-            { first: 'Bob', last: 'Li' },
+            { first: 'Boblii', last: 'Li' },
             { first: 'Ayesha', last: 'Johnson' },
             { first: 'Fatma', last: 'Kumari' },
             { first: 'Tony', last: 'Morelli' }
@@ -22,7 +24,6 @@ export class MyEmpList extends PolymerElement {
 
     // properties, observers, etc. are identical to 2.x
     static get properties() {
+        return undefined;
     }
 }
-
-// customElements.define(kebabCase('MyEmpList'), MyEmpList);
