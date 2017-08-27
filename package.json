@@ -8,7 +8,8 @@
     "@polymer/iron-resizable-behavior": "next",
     "@polymer/paper-button": "next",
     "@polymer/polymer": "next",
-    "@webcomponents/webcomponentsjs": "^1.0.8"
+    "@webcomponents/webcomponentsjs": "^1.0.8",
+    "lodash": "^4.17.4"
   },
   "resolutions": {
     "@polymer/polymer": "3.0.0-pre.1"

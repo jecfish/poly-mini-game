@@ -5,6 +5,8 @@ import { Element as PolymerElement } from '../node_modules/@polymer/polymer/poly
 import '../node_modules/@polymer/paper-button/paper-button.js';
 import { IronResizableBehavior } from '../node_modules/@polymer/iron-resizable-behavior/iron-resizable-behavior.js';
 import * as Async from '../node_modules/@polymer/polymer/lib/utils/async.js';
+import { MyEmpList }  from './emp-list.js';
+// import * as kebabCase from '../node_modules/lodash/fp/kebabCase.js'; 
 
 // Async.microTask.run(callback);
 
@@ -13,7 +15,15 @@ export class MyApp extends PolymerElement {
 
     // Define a string template instead of a `<template>` element.
     static get template() {
-        return `<div>This is my [[name]] app.</div>`
+        return `
+            <div>This is my [[name]] app.</div>
+            <div>This is my {{name}} app.</div>
+            <div>
+                <p>--start--</p>
+                <my-emp-list></my-emp-list>
+                <p>--end--</p>
+            </div>
+            `
     }
 
     constructor() {
