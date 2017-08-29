@@ -1,14 +1,16 @@
 import * as kebabCase from 'lodash/fp/kebabCase';
 import { MyApp } from './app';
 import { MyEmpList } from './emp-list';
+import { MyTopBar } from './top-bar';
 import { environment } from './environments/environment';
 
-console.log(environment.production);
+// console.log(environment.production);
 
 // add custom elements here
 const elements = {
     MyApp,
-    MyEmpList
+    MyEmpList,
+    MyTopBar,
 };
 
 // register all components as kebab case

@@ -1,11 +1,8 @@
-
-// Element is the same as Polymer.Element in 2.x
-// Modules give you the freedom to rename the members that you import
 import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
+import '@polymer/polymer/lib/elements/dom-repeat';
 import * as view from './emp-list.template.html';
 
 export class MyEmpList extends PolymerElement {
-
     employees: any[];
 
     static get template() {
@@ -20,10 +17,5 @@ export class MyEmpList extends PolymerElement {
             { first: 'Fatma', last: 'Kumari' },
             { first: 'Tony', last: 'Morelli' }
         ];
-    }
-
-    // properties, observers, etc. are identical to 2.x
-    static get properties() {
-        return undefined;
     }
 }
