@@ -5,10 +5,10 @@ import * as view from './app.template.html';
 
 export class MyApp extends PolymerElement {
 
-    cards: Card[];
+    cards: PolyTest.Card[];
     totalSeconds = 0;
     timer: any = 0;
-    currentTime = { hour: 0, minute: 0, second: 0 };
+    currentTime: PolyTest.Time = { hour: 0, minute: 0, second: 0 };
     isGameCompleted = false;
 
     // Define a string template instead of a `<template>` element.
@@ -33,7 +33,7 @@ export class MyApp extends PolymerElement {
         this.cards = this.shuffleCards();
     }
 
-    private shuffleCards(): Card[] {
+    private shuffleCards(): PolyTest.Card[] {
         const ids = ['a', 'b', 'c', 'd', 'e', 'f'];
         const cards = [...ids, ...ids];
         const imgBaseUrl = 'static/images/avengers/%img.jpg';

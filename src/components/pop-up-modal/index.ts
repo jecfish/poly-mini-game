@@ -2,7 +2,7 @@ import * as shuffle from 'lodash/fp/shuffle';
 import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
 import { GestureEventListeners } from '@polymer/polymer/lib/mixins/gesture-event-listeners';
 import * as view from './pop-up-modal.template.html';
-import { padTime } from '../../utils';
+import { timeFormatter } from '../../utils';
 
 export class MyPopUpModal extends GestureEventListeners(PolymerElement) {
     // Define a string template instead of a `<template>` element.
@@ -26,13 +26,8 @@ export class MyPopUpModal extends GestureEventListeners(PolymerElement) {
         };
     }
 
-    private timeChanged(value: any) {
-        if (!value) return;
-        const newVal = { ...value };
-        Object.keys(newVal)
-            .forEach(k => newVal[k] = padTime(newVal[k]));
-
-        return newVal;
+    private timeChanged(value: PolyTest.Time) {
+       return timeFormatter(value);
     }
 
     reset() {

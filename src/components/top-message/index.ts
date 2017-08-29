@@ -1,7 +1,7 @@
 
 import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
 import * as view from './top-message.template.html';
-import { padTime } from '../../utils';
+import { timeFormatter } from '../../utils';
 
 export class MyTopMessage extends PolymerElement {
     static get template() {
@@ -24,13 +24,8 @@ export class MyTopMessage extends PolymerElement {
         };
     }
 
-    private timeChanged(value: any) {
-        if (!value) return;
-        const newVal = { ...value };
-        Object.keys(newVal)
-            .forEach(k => newVal[k] = padTime(newVal[k]));
-
-        return newVal;
+    private timeChanged(value: PolyTest.Time) {
+        return timeFormatter(value);;
     }
 
     

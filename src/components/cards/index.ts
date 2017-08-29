@@ -23,7 +23,7 @@ export class MyCards extends GestureEventListeners(PolymerElement) {
         return (item.isFlipped || item.isMatched) ? 'card flipped' : 'card';
     }
 
-    cards: Card[];
+    cards: PolyTest.Card[];
 
     private get isReachMaxFlippedCard() {
         const maxFlippedCard = 2;
