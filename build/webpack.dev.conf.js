@@ -9,7 +9,7 @@ module.exports = {
   entry: {
     // 'custom-elements-es5-adapter': ['@webcomponents/webcomponentsjs/custom-elements-es5-adapter'],
     // 'webcomponents-loader': ['@webcomponents/webcomponentsjs/webcomponents-loader'],
-    // vendor: ['./src/vendor'],
+    vendor: ['./src/vendor'],
     app: [
         'webpack-dev-server/client?http://localhost:8080', // live reload
         './src/index'

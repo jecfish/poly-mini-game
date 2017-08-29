@@ -36,7 +36,7 @@
     "is-fullwidth-code-point": "2.0.0",
     "ansi-regex": "2.1.1",
     "assert-plus": "0.2.0",
-    "uglify-js": "3.0.28",
+    "uglify-js": "2.8.29",
     "loader-utils": "1.1.0",
     "readable-stream": "2.3.3",
     "isarray": "1.0.0",
@@ -63,12 +63,13 @@
     "pify": "2.3.0",
     "strip-bom": "3.0.0",
     "array-flatten": "2.1.1",
-    "mime": "1.3.6",
+    "mime": "1.4.0",
     "faye-websocket": "0.11.1",
     "url-parse": "1.1.9",
     "querystringify": "1.0.0",
     "glob": "7.1.2",
-    "bluebird": "3.5.0"
+    "bluebird": "3.5.0",
+    "mime-db": "1.30.0"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.16",
