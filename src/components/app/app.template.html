@@ -1,0 +1,8 @@
+<div>
+  <my-top-bar on-reset-clicked="resetGame"></my-top-bar>
+  <my-top-message time="{{currentTime}}"></my-top-message>
+  <my-cards cards="{{cards}}" on-card-flipped="startGame" on-all-cards-matched="stopGame"></my-cards>
+  <template is="dom-if" if="[[isGameCompleted]]">
+      <my-pop-up-modal time="{{currentTime}}" on-reset-clicked="resetGame"></my-pop-up-modal>
+  </template>
+</div>

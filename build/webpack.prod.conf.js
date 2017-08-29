@@ -18,6 +18,9 @@ module.exports = {
     rules: [
       {
         test: /\.(html)$/,
+        include: [
+          path.resolve(__dirname, '../src')
+        ],
         use: {
           loader: 'html-loader'
         }
@@ -25,7 +28,7 @@ module.exports = {
       {
         test: /\.ts?$/,
         use: 'ts-loader',
-        exclude: /node_modules/
+        exclude: [/node_modules/, /plop-templates/],
       }
     ]
   },

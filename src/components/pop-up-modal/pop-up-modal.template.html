@@ -1,0 +1,46 @@
+<!-- pop up modal -->
+<div class="pop-up-modal">
+  <div class="message">
+    <p>
+      Congratulation, you've completed the game in
+    </p>
+    <p>
+      {{ displayTime.hour }}: {{ displayTime.minute }}: {{ displayTime.second }}
+    </p>
+    <p>
+      <button on-tap="reset">Play again!</button>
+    </p>
+  </div>
+</div>
+<style>
+  .pop-up-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pop-up-modal .message {
+    border: 5px dashed white;
+    background: #173e56;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin: 10px;
+  }
+
+  .pop-up-modal .message p {
+    padding: 5px;
+  }
+
+  .pop-up-modal button {
+    background: white;
+    border: none;
+    padding: 5px 20px;
+  }
+</style>

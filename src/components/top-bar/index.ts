@@ -15,6 +15,5 @@ export class MyTopBar extends GestureEventListeners(PolymerElement) {
 
     reset() {
         (this as any).dispatchEvent(new CustomEvent('reset-clicked'));
-        console.log('reset clicked');
     }
 }

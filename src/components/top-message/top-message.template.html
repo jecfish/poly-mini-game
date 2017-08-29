@@ -1,0 +1,20 @@
+<div class="top-message">
+  <p>
+    Flip any card to start.
+  </p>
+  <p>
+    <!-- TODO: i need something like polymer expressions, angularjs filters -->
+    {{ displayTime.hour }}: {{ displayTime.minute }}: {{ displayTime.second }}
+  </p>
+</div>
+
+<style>
+  .top-message {
+    margin-bottom: 15px;
+  }
+
+  .top-message p {
+    text-align: center;
+    padding: 5px;
+  }
+</style>
