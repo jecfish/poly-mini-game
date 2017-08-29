@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -32,6 +34,10 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist'], { root: path.resolve(__dirname, '..') }),
+    new webpack.NormalModuleReplacementPlugin(
+      /environments\/environment\.ts/,
+      'environment.prod.ts'
+    ),
     new CommonsChunkPlugin({
       // The order of this array matters
       names: ['vendor'],
@@ -40,5 +46,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html'
     }),
+    // copy custom static assets
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../static'),
+        to: 'static',
+        ignore: ['.*']
+      },
+      {
+        from: path.resolve(__dirname, '../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js')
+      }
+    ]),
+    // get around with stupid warning
+    new webpack.IgnorePlugin(/vertx/),
   ]
 };
