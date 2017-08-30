@@ -7,5 +7,5 @@ before_install:
 cache: yarn
 before_script:
   - yarn add firebase-tools
-  - yarn run deploy
-script: yarn
+script: 
+  - yarn run deploy --token "$FIREBASE_TOKEN"
