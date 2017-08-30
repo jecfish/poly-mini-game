@@ -8,7 +8,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    vendor: ['./src/vendor'],
+    // vendor: ['./src/vendor'],
     app: './src/index'
   },
   output: {
@@ -39,11 +39,11 @@ module.exports = {
       /environments\/environment\.ts/,
       'environment.prod.ts'
     ),
-    new CommonsChunkPlugin({
-      // The order of this array matters
-      names: ['vendor'],
-      minChunks: Infinity
-    }),
+    // new CommonsChunkPlugin({
+    //   // The order of this array matters
+    //   names: ['vendor'],
+    //   minChunks: Infinity
+    // }),
     // not able to uglify, probably related to: https://github.com/Polymer/polymer-cli/issues/388
     // new webpack.optimize.UglifyJsPlugin({
     //   compress: {

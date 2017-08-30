@@ -1,5 +1,5 @@
 {
-  "name": "poly-test",
+  "name": "poly-mini-game",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -9,10 +9,7 @@
     "build": "webpack --config ./build/webpack.prod.conf.js"
   },
   "dependencies": {
-    "@polymer/iron-resizable-behavior": "next",
-    "@polymer/paper-button": "next",
     "@polymer/polymer": "next",
-    "@types/lodash": "^4.14.74",
     "@webcomponents/webcomponentsjs": "^1.0.8",
     "lodash": "^4.17.4",
     "reflect-metadata": "^0.1.10"
