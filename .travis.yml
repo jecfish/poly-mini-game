@@ -9,6 +9,10 @@ before_install:
   - export PATH="$HOME/.yarn/bin:$PATH"
 cache: yarn
 before_script:
-  - yarn add firebase-tools
+  - npm i -g firebase-tools
 script: 
-  - yarn run deploy --token "$FIREBASE_TOKEN"
+  - yarn run build
+deploy:
+  provider: firebase
+  token:
+    secure: "$FIREBASE_TOKEN"
