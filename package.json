@@ -6,7 +6,9 @@
   "flat": true,
   "scripts": {
     "start": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
-    "build": "webpack --config ./build/webpack.prod.conf.js"
+    "build": "webpack --config ./build/webpack.prod.conf.js",
+    "predeploy": "yarn run build",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "@polymer/polymer": "next",
