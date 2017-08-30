@@ -1,0 +1,71 @@
+<div class="cards">
+  <template is="dom-repeat" items="[[cards]]">
+    <div class$="[[getClass(item)]]" on-tap="flip">
+        <div class="face cover">
+          <img src="{{item.coverImageUrl}}" alt="cover">
+        </div>
+        <div class="face value">
+          <img src="{{item.imageUrl}}" alt="card">
+        </div>
+    </div>
+  </div>
+</div>
+<style>
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100vw;
+    justify-content: center;
+  }
+
+  .card {
+    margin: 10px;
+    position: relative;
+    width: 25vh;
+    height: 25vh;
+  }
+
+  .card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* for safari */
+    transition: transform 0.3s;
+  }
+
+  .card .face.value {
+    transform: rotateY(-180deg);
+  }
+
+  .card.flipped .face.cover {
+    transform: rotateY(-180deg);
+  }
+
+  .card.card.flipped .face.value {
+    transform: rotateY(0deg);
+  }
+
+  .card .face img {
+    width: 25vh;
+    height: 25vh;
+    border-radius: 6px;
+  }
+  /* small device styles, smaller than ipad */
+
+  @media (max-width: 768px) {
+    .card {
+      margin: 2px;
+      position: relative;
+      width: 25vw;
+      height: 25vw;
+    }
+
+    .card .face img {
+      width: 25vw;
+      height: 25vw;
+      border-radius: 6px;
+    }
+  }
+</style>
